@@ -4,30 +4,61 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic-Tac-Toe Game</title>
-    <link rel="stylesheet"href="game.css"/>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap">
+    <link rel="stylesheet" href="game.css"/>
 </head>
 <body>
-   <div class="msg-container hide">
-    <p id="msg">Winner</p>
-    <button id="new-btn">New Game</button>
-   </div>
-   <main>
-    <h1>Tic-Tac-Toe</h1>
-    <div class="container">
-        <div class ="game">
-            <button class ="box"></button>
-            <button class ="box"></button>
-            <button class ="box"></button>
-            <button class ="box"></button>
-            <button class ="box"></button>
-            <button class ="box"></button>
-            <button class ="box"></button>
-            <button class ="box"></button>
-            <button class ="box"></button>
+    <div class="game-container">
+        <div class="msg-container hide">
+            <div class="msg-box">
+                <p id="msg">Winner</p>
+                <button id="new-btn">New Game</button>
+            </div>
         </div>
+        
+        <main>
+            <h1>Tic Tac Toe</h1>
+            <p class="game-info">You play as O against the AI (X)</p>
+            
+            <div class="scoreboard">
+                <div class="score-card">
+                    <h3>You (O)</h3>
+                    <p id="player-score">0</p>
+                </div>
+                <div class="score-card">
+                    <h3>Draws</h3>
+                    <p id="draws">0</p>
+                </div>
+                <div class="score-card">
+                    <h3>AI (X)</h3>
+                    <p id="ai-score">0</p>
+                </div>
+            </div>
+            
+            <div class="container">
+                <div class="game">
+                    <button class="box" data-index="0"></button>
+                    <button class="box" data-index="1"></button>
+                    <button class="box" data-index="2"></button>
+                    <button class="box" data-index="3"></button>
+                    <button class="box" data-index="4"></button>
+                    <button class="box" data-index="5"></button>
+                    <button class="box" data-index="6"></button>
+                    <button class="box" data-index="7"></button>
+                    <button class="box" data-index="8"></button>
+                </div>
+            </div>
+            
+            <div class="buttons">
+                <button id="reset-btn">Reset Game</button>
+                <button id="reset-score">Reset Score</button>
+            </div>
+        </main>
+        
+        <footer>
+            <p>AI-powered Tic Tac Toe using Minimax Algorithm</p>
+        </footer>
     </div>
-  <button id="reset-btn">Reset Game</button>
-   </main>
-   <script src="game.js"></script>
+    <script src="game.js"></script>
 </body>
 </html>
